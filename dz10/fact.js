@@ -7,7 +7,8 @@ var lab_scheme = {
     'TR': ['# #', '#  ', '###']
 }
 
-function render(arr) {   
+function render(arr) { 
+    var arr = [];  
     for(key in lab_scheme) {  
         for(i = 0; i < 3; i++) {
             var stringOne = '',
@@ -15,10 +16,12 @@ function render(arr) {
                 stringThree = '';                          
             stringOne += lab_scheme[key][0];                
             stringTwo += lab_scheme[key][1];       
-            stringThree += lab_scheme[key][2];                          
+            stringThree += lab_scheme[key][2];
+            var line = [];                          
         }
-        for(prop in arr){
-           var prop = lab_scheme[key];
+        for(k = 0; k < line.length; k++){
+           
+           line.push(stringOne[i]);
         }              
     }         
 }
