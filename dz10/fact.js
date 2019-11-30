@@ -8,23 +8,23 @@ var lab_scheme = {
 }
 
 function render(arr) { 
-    var arr = [];  
-    for(key in lab_scheme) {  
+    var stringOne = '';     
+    for(var line in arr) {  
         for(i = 0; i < 3; i++) {
-            var stringOne = '',
-                stringTwo = '',
-                stringThree = '';                          
-            stringOne += lab_scheme[key][0];                
-            stringTwo += lab_scheme[key][1];       
-            stringThree += lab_scheme[key][2];
-            var line = [];                          
-        }
-        for(k = 0; k < line.length; k++){
-           
-           line.push(stringOne[i]);
-        }              
-    }         
-}
+            for(var key in line){
+                console.log(arr[line]);
+                for(key in lab_scheme) {
+                    stringOne += lab_scheme[key][0];                
+                    stringOne += lab_scheme[key][1];
+                    stringOne += lab_scheme[key][2];
+                    stringOne += '\r\n';
+                }              
+            }                                                
+        }                            
+    }   
+    console.log(stringOne);         
+}           
+
  render([
     ['NO', 'BR', 'LR', 'LB', 'NO'],
     ['LR', 'LT', 'NO', 'TR', 'LR']
