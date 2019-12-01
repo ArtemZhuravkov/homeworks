@@ -9,20 +9,15 @@ var lab_scheme = {
 
 function render(arr) { 
     var stringOne = '';     
-    for(var line in arr) {  
-        for(i = 0; i < 3; i++) {
-            for(var key in line){
-                console.log(arr[line]);
-                for(key in lab_scheme) {
-                    stringOne += lab_scheme[key][0];                
-                    stringOne += lab_scheme[key][1];
-                    stringOne += lab_scheme[key][2];
-                    stringOne += '\r\n';
-                }              
-            }                                                
-        }                            
+    for(var line in arr) {                  
+            for(i = 0; i < 3; i++) {                                        
+                for(var key in arr[line]) {                     
+                    stringOne += lab_scheme[arr[line][key]][i];                                      
+            }
+            stringOne += '\r\n';                                                                                    
+        }                        
     }   
-    console.log(stringOne);         
+    console.log(stringOne);      
 }           
 
  render([
