@@ -1,13 +1,7 @@
-var words = [];
-function render(){
-    for(i = 0; i < 5; i++){
-        words[i] = prompt('Enter the symbols');        
-    }
-    console.log(words);
-    for( var key in words)
-    console.log (key + ':' + words[key]); 
+
+function render(arr){
+    for(var key in arr)
+    console.log(newArr = [key + ':' + arr[key]]); 
+     
 }
-render(words);
-
-    
-
+render(['a', 'b', 'c', 'd']);
