@@ -1,7 +1,10 @@
 
 function render(arr){
+    var newArr = [];
     for(var key in arr)
-    console.log(newArr = [key + ':' + arr[key]]); 
+    newArr.push(key + ':' + arr[key]);
+    // console.log(newArr = [key + ':' + arr[key]]);
+    return newArr 
      
 }
-render(['a', 'b', 'c', 'd']);
+console.log(render(['a', 'b', 'c', 'd']));
