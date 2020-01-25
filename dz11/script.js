@@ -1,7 +1,7 @@
-var arr = [1, 2, 3, 4, -5];
+var arr = [-1, -2, -3, 4, -5];
 function some(arr, cb) {
     for (let index = 0; index < array.length; index++) {
-        if(!cb(arr[index], index, arr)) {
+        if(cb(arr[index], index, arr)) {
             return true;
         }        
     }
@@ -15,7 +15,7 @@ console.log(newArr);
 
 
 
-function fill(arr, cb) {    
+function filter(arr, cb) {    
     var newArr = [];   
     for (var index = 0; index < arr.length; index++) {
         if(cb(arr[index], index, arr)){
@@ -27,7 +27,7 @@ function fill(arr, cb) {
 
 
 var arr = ['artem', 'ivan', 'roman', 'lev', 'inna'];
-var result = fill(arr, function(word){
-    return word.length > 3
+var result = filter(arr, function(word){
+    return word.length > 4
 });
 console.log(result);
