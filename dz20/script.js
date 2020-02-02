@@ -20,4 +20,12 @@ var fnc = function(e) {
   }
 };
 
-document.addEventListener('keydown', fnc);
+
+
+var cell = document.querySelectorAll('.game__cells__item');
+
+[].forEach.call(cell, function(el){
+  el.onclick = function(e){
+    console.log('click', e);
+  };
+});

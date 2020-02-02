@@ -50,12 +50,10 @@ var BattleGround = (function() {
     this.cellsElement.innerHTML = '';
     this.area.forEach(function(el) {
       var cell = document.createElement('div');
-      var cellElement = el.render();
-
+      var cellElement = el.render();      
       cell.classList.add('game__cells__item');
       cell.appendChild(cellElement);
-      self.cellsElement.appendChild(cell);
-      
+      self.cellsElement.appendChild(cell);      
     });
   };
 
