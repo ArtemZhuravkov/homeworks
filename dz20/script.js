@@ -24,8 +24,9 @@ var fnc = function(e) {
 
 var cell = document.querySelectorAll('.game__cells__item');
 
-[].forEach.call(cell, function(el){
-  el.onclick = function(e){
-    console.log('click', e);
-  };
-});
+
+for (var i = 0; i < cell.length; i++) {   
+  cell[i].addEventListener('click', function(e){
+    console.log(e);    
+  });
+}
